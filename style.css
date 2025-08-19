@@ -133,6 +133,7 @@
      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
      gap: 20px;
      margin-bottom: 30px;
+     padding: 0 5px;
  }
 
  .summary-card {
@@ -375,6 +376,7 @@
      padding: 20px 15px;
      border-top: 3px solid #3282b8;
      font-size: 1.1rem;
+     text-align: start;
  }
 
  /* Sub-rows with enhanced styling */
