@@ -181,12 +181,6 @@
      }
  }
 
- .summary-card:hover {
-     transform: translateY(-5px) scale(1.02);
-     box-shadow: 0 15px 40px rgba(50, 130, 184, 0.4);
-     color: white;
- }
-
  .summary-card h3 {
      font-size: 1.8rem;
      margin-bottom: 8px;
@@ -694,5 +688,6 @@
      opacity: 1;
 
  }
+
 
 
