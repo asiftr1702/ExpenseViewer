@@ -502,11 +502,11 @@
  @media (max-width: 600px) {
 
     body{
-        padding: 5px;
+        padding: 0px;
     }
     .container {
         padding: 8px;
-        margin: 4px;
+        margin: 0px;
         border-radius: 10px;
     }
 
@@ -612,6 +612,7 @@
 /* Optional: Make table horizontally scrollable on small screens */
 .table-container {
     overflow-x: auto;
+    padding: 5px;
 }
 
 @media (max-width: 400px) {
@@ -672,6 +673,7 @@
      opacity: 1;
 
  }
+
 
 
 
