@@ -458,6 +458,9 @@
 
  /* Mobile responsiveness */
  @media (max-width: 768px) {
+      body{
+        padding: 5px;
+     }
      .container {
          padding: 20px;
          margin: 10px;
@@ -690,3 +693,4 @@
      opacity: 1;
 
  }
+
