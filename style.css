@@ -33,7 +33,7 @@
      max-width: 1000px;
      margin: 0 auto;
      background: rgba(255, 255, 255, 0.95);
-     border-radius: 10px;
+     border-radius: 0;
      padding: 10px 20px;
      overflow: hidden;
  }
@@ -456,9 +456,8 @@
         padding: 5px;
      }
      .container {
-         padding: 20px;
-         margin: 10px;
-         border-radius: 20px;
+         padding: 10px;
+         margin: 0;
      }
 
      .header h1 {
@@ -506,7 +505,6 @@
     .container {
         padding: 8px;
         margin: 0px;
-        border-radius: 10px;
     }
 
     .header h1 {
