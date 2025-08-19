@@ -502,6 +502,10 @@
  }
 
  @media (max-width: 600px) {
+
+    body{
+        padding: 5px;
+    }
     .container {
         padding: 8px;
         margin: 4px;
@@ -684,4 +688,5 @@
 
  .tooltip:hover::before {
      opacity: 1;
+
  }
