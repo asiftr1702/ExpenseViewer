@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मस्जिद कमरा तामीर</title> 
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+        
+        <div class="header">
+            <h1>🕌 मस्जिद कमरा तामीर प्रोजेक्ट</h1>
+            <div class="progress-indicator">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-text" id="progress-text">65% पूर्ण</div>
+            </div>
+        </div>
+        
+        <div class="summary">
+            <div class="summary-card tooltip" data-tooltip="कुल खर्चा जो अब तक हुआ है">
+                <h3>₹1,45,875</h3>
+                <p>अभी तक खर्च हुआ</p>
+            </div>
+            <div class="summary-card tooltip" data-tooltip="बाकी कामों का अनुमानित खर्च">
+                <h3>₹67,500</h3>
+                <p>अनुमानित खर्च बाकी कामों के लिए</p>
+            </div>
+            <div class="summary-card tooltip" data-tooltip="प्रोजेक्ट की कुल लागत">
+                <h3>₹2,13,375</h3>
+                <p>कुल अनुमानित खर्च</p>
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>तामीरी काम</th>
+                        <th>हालत</th>
+                        <th>रकम (₹)</th>
+                        <th>किस्म</th>
+                    </tr>
+                </thead> 
+                <tbody id="expense-table-body"></tbody>
+            </table>
+        </div>
+        
+        <!-- <div class="footer-note">
+            <strong>💡 नोट:</strong> दरवाज़े का खर्चा अलहम्दुलिल्लाह एक साहब ने उठाने का वादा किया है |
+        </div> -->
+    </div>
+
+    <div class="fab tooltip" data-tooltip="प्रगति देखें">
+        📊
+    </div>
+    
+    <script type="module" src="./script.js"></script>
+</body>
+</html>
