@@ -38,10 +38,13 @@ function renderTable() {
         row.subRows.forEach(sub => {
             html += `
             <tr class="sub-row">
-                <td class="sub-item">${sub.name}</td>
-                <td>---</td>
-                <td class="${getAmountClass(row.type)}">₹${sub.amount.toLocaleString()}</td>
-                <td>${sub.type}</td>
+                <td colspan="4" style="padding:0;border:none;">
+                    <div class="sub-row-inner">
+                        <span class="sub-item">${sub.name}</span>
+                        <span style="margin:0 20px;">---</span>
+                        <span class="${getAmountClass(row.type)}">₹${sub.amount.toLocaleString()}</span>
+                    </div>
+                </td>
             </tr>
             `;
         });
@@ -102,15 +105,14 @@ updateProgress();
 tbody.addEventListener("click", function(e) {
     const row = e.target.closest(".parent-row");
     if (!row) return;
-    const icon = row.querySelector('.expand-icon');
-    let next = row.nextElementSibling;
     const isExpanded = row.classList.contains('expanded');
     row.classList.toggle('expanded');
+    let next = row.nextElementSibling;
     while (next && next.classList.contains("sub-row")) {
         if (isExpanded) {
-            next.style.display = "none";
+            next.classList.remove('open');
         } else {
-            next.style.display = "table-row";
+            next.classList.add('open');
         }
         next = next.nextElementSibling;
     }

@@ -261,7 +261,7 @@
      display: flex;
      align-items: center;
      gap: 10px;
-     justify-content: center;
+     justify-content: start;
  }
 
  .expand-icon {
@@ -380,41 +380,33 @@
 
  /* Sub-rows with enhanced styling */
  .sub-row {
-     display: none;
-     background: linear-gradient(90deg, rgba(50, 130, 184, 0.02), rgba(15, 76, 117, 0.02));
-     animation: slideIn 0.3s ease;
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
  }
 
- @keyframes slideIn {
-     0% {
-         opacity: 0;
-         transform: translateY(-10px);
-     }
-
-     100% {
-         opacity: 1;
-         transform: translateY(0);
-     }
+ .sub-row .sub-row-inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(.4,0,.2,1), padding 0.3s;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
  }
 
- .sub-row td {
-     font-size: 0.9rem;
-     color: #4a5568;
-     text-align: center;
-     padding: 12px 15px;
+ .sub-row.open {
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
  }
 
- .sub-item {
-     text-align: right;
-     padding-left: 40px;
-     font-weight: 500;
-     color: #3282b8;
-     display: flex;
-     align-items: center;
-     gap: 8px;
-     justify-content: flex-end;
+ .sub-row.open .sub-row-inner {
+    max-height: 80px;
+    padding: 12px 15px;
  }
-
+ 
  .footer-note {
      text-align: center;
      padding: 20px;
@@ -570,7 +562,7 @@
      .task-name,
      .sub-item {
          text-align: center;
-         justify-content: center;
+         justify-content: start;
          padding-left: 0;
      }
 
@@ -641,7 +633,13 @@
         font-size: 0.7rem;
     }
 
-    .task-name,
+    .task-name{
+        font-size: 0.7rem;
+        padding-left: 0;
+        justify-content: start;
+        text-align: left;
+    }
+    
     .sub-item {
         font-size: 0.7rem;
         padding-left: 0;
@@ -687,10 +685,31 @@
     font-size: 0.8rem;
 }
 
-.sub-row td {
-    font-size: 0.65rem;
-    color: rgb(74, 85, 104);
-    text-align: center;
+.sub-row {
+    height: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.sub-row .sub-row-inner {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(.4,0,.2,1), padding 0.3s;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-row.open {
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sub-row.open .sub-row-inner {
+    max-height: 80px;
     padding: 12px 15px;
 }
 }
