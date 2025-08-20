@@ -137,4 +137,10 @@ document.querySelectorAll('.summary-card').forEach(card => {
 setTimeout(() => {
     document.querySelector('.table-container').style.animation = 'fadeInUp 0.8s ease 0.4s both';
     // document.querySelector('.footer-note').style.animation = 'fadeInUp 0.8s ease 0.5s both';
+    
+    // Show donation section after table loads
+    const donationSection = document.querySelector('.donation-section');
+    if (donationSection) {
+        donationSection.classList.add('visible');
+    }
 }, 100);
