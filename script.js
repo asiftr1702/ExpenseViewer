@@ -127,11 +127,11 @@ document.querySelectorAll('.summary-card').forEach(card => {
 });
 
 // FAB click handler
-document.querySelector('.fab').addEventListener('click', () => {
-    document.querySelector('.summary').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
+// document.querySelector('.fab').addEventListener('click', () => {
+//     document.querySelector('.summary').scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// });
 
 // Add entrance animations
 setTimeout(() => {
