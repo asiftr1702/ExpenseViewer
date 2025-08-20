@@ -770,6 +770,51 @@
     pointer-events: auto;
 }
 
+.share-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0 10px 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.share-btn {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(50,130,184,0.13);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.3s;
+    outline: none;
+    position: relative;
+}
+
+
+
+.share-icon {
+    font-size: 1.1rem;
+}
+
+.share-feedback {
+    color: #319795;
+    font-size: 0.98rem;
+    min-height: 18px;
+    transition: opacity 0.3s;
+    opacity: 0;
+    font-weight: 500;
+}
+.share-feedback.visible {
+    opacity: 1;
+}
+
 
 
 

@@ -144,3 +144,42 @@ setTimeout(() => {
         donationSection.classList.add('visible');
     }
 }, 100);
+
+// Share button logic
+const shareBtn = document.getElementById('share-btn');
+const shareFeedback = document.getElementById('share-feedback');
+
+if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+        const shareData = {
+            title: document.title,
+            text: 'मस्जिद कमरा तामीर प्रोजेक्ट देखें:',
+            url: window.location.href
+        };
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+                showShareFeedback('शेयर किया गया!');
+            } catch (err) {
+                showShareFeedback('शेयर रद्द किया गया।');
+            }
+        } else {
+            // Fallback: copy URL to clipboard
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                showShareFeedback('लिंक कॉपी हो गया!');
+            } catch {
+                showShareFeedback('कॉपी नहीं हो सका।');
+            }
+        }
+    });
+}
+
+function showShareFeedback(msg) {
+    if (!shareFeedback) return;
+    shareFeedback.textContent = msg;
+    shareFeedback.classList.add('visible');
+    setTimeout(() => {
+        shareFeedback.classList.remove('visible');
+    }, 1800);
+}
